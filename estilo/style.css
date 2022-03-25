@@ -14,12 +14,17 @@
 :root {
     --fonte1: 'Asap', sans-serif;
     --fonte2:  'Nunito', sans-serif;
-    --fonte3: 'Yellowtail', cursive;
+    --fonte3: 'Yellowtail', serif;
+
+    --cor1: rgb(23, 8, 110);
 }
 
 body, html {
     font-family: var(--fonte2);
     color: #1c1c1c;
+    max-width: 1920px;
+    margin: 0 auto;
+    align-items: center;
     
 }
 
@@ -28,12 +33,17 @@ h1, h2, h3 {
     color: #000000;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 /*Configurações Globais*/
 
 /*Header*/
 
 #topo {
     padding: 20px;
+    
 
     background-color: rgb(23, 8, 110);
     color: white;
@@ -46,7 +56,8 @@ h1, h2, h3 {
 }
 
 #topo > h1 {
-    font-family: var(--fonte2);
+    font-family: var(--fonte3);
+    font-size: 2.2em;
     font-weight: bold;
     color: white;
 
@@ -58,14 +69,26 @@ h1, h2, h3 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
     gap: 100px;
     margin-right: 100px;
+    
 
 }
 
 #topo > nav > ul > li > a {
     color: white;
+    font-family: var(--fonte2);
+    padding: 10px;
 
+}
+
+#topo > nav > ul > li > a:hover {
+    background-color: rgb(32, 10, 158);
+
+    transition-duration: .3s;
+
+    text-decoration: none;
 }
 
 /*Header*/
@@ -81,7 +104,7 @@ h1, h2, h3 {
     background-size: cover;
     background-attachment: scroll;
 
-    height: 70vh;
+    padding-bottom: 200px;
 
     color: white;
     text-align: center;
@@ -117,7 +140,7 @@ h1, h2, h3 {
 
     text-align: center;
 
-    height: 30vh;
+    padding-bottom: 70px;
 }
 
 #sobre > h2 {
@@ -137,30 +160,140 @@ h1, h2, h3 {
 
     border-radius: 5px;
     padding: 10px 20px;
+    
+    
 }
 
 /*Serviços*/
 
-#servicos {
-    height: 50vh;
-    margin: 30px;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 30px;
-
-    align-items: center;
+#servicos-titulo {
     text-align: center;
+    padding: 50px;
 }
 
-#servicos > div > img, h3 ,p {
-    margin: 10px;
+#servicos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    padding-bottom: 80px;
+
+}
+
+#servicos > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    gap: 20px;
 }
 
 /*Fotos*/
 
 #fotos {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0px;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.103);
+}
+
+#fotos h2 {
+    margin-bottom: 20px;   
+}
+
+#fotos img {
+    max-width: 500px;
+    margin: 3px;
+}
+
+/*contato*/
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.103);
+
+    padding: 70px;
+}
+
+/*main*/
+
+/*footer*/
+
+footer {
+    background-color: var(--cor1);
+    color: white;
+
+    padding: 20px;
+
+    text-align: center;
+    
+}
+
+footer > a {
+    background-color: white;
+    color: black;
+
+    padding: 10px 20px;
+    border-radius: 5px;
+    
+
+}
+
+footer > p {
+    margin-top: 30px;
+}
+
+/*footer*/
+
+@media (max-width:1200px) {
+
+/*Header*/
+
+#topo {
+    padding: 20px;
+    
+
+    background-color: rgb(23, 8, 110);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+}
+
+#topo > h1 {
+    font-family: var(--fonte3);
+    font-size: 2.2em;
+    font-weight: bold;
+    color: white;
+
+    margin: 0 auto;
+
+}
+
+#topo > nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    gap: 100px;
+    margin: 0 auto;
+    
+}
+
 }
