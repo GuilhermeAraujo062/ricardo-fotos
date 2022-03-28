@@ -37,9 +37,20 @@ a:hover {
     text-decoration: underline;
 }
 
+#checkbox-menu {
+    position: absolute;
+    display: none;
+}
+
 /*Configurações Globais*/
 
+
+
 /*Header*/
+
+nav#navegaçao {
+    display: none;
+}
 
 #topo {
     padding: 20px;
@@ -52,7 +63,7 @@ a:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+    
 }
 
 #topo > h1 {
@@ -73,7 +84,6 @@ a:hover {
     gap: 100px;
     margin-right: 100px;
     
-
 }
 
 #topo > nav > ul > li > a {
@@ -257,13 +267,12 @@ footer > p {
 
 /*footer*/
 
-@media (max-width:1200px) {
+@media (max-width: 1200px) {
 
 /*Header*/
 
 #topo {
     padding: 20px;
-    
 
     background-color: rgb(23, 8, 110);
     color: white;
@@ -295,5 +304,135 @@ footer > p {
     margin: 0 auto;
     
 }
+
+}
+
+@media (max-width: 1032px) {
+
+/*fotos*/
+
+    #fotos img {
+        max-width: 400px;
+        margin: 3px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+/*Header*/
+
+#topo {
+    padding: 20px;
+    
+
+    background-color: rgb(23, 8, 110);
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+
+}
+
+#topo > h1 {
+    font-family: var(--fonte3);
+    font-size: 2.2em;
+    font-weight: bold;
+    color: white;
+
+    margin: 0;
+
+}
+
+nav {
+    display: none;
+}
+
+/*menu hamburguer*/
+
+.hamburguer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#checkbox-menu {
+    position: absolute;
+    opacity: 0;
+}
+
+label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 30px;
+}
+
+label span {
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background-color: white;
+    transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1) {
+    top: 0;
+}
+
+label span:nth-child(2) {
+    top: 8px;
+}
+
+label span:nth-child(3) {
+    top: 16px;
+}
+
+#checkbox-menu:checked + label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 8px;
+}
+
+#checkbox-menu:checked + label span:nth-child(2) {
+    opacity: 0;
+}
+
+#checkbox-menu:checked + label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+/*Main*/
+
+/*serviços*/
+
+#servicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    padding-bottom: 80px;
+
+}
+
+#servicos > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    gap: 20px;
+}
+
+
 
 }
